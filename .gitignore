@@ -37,6 +37,6 @@ doc/
 .DS_Store
 .idea
 .secret
-
-
+/config/credentials.yml.enc
+/config/master.key
 .env
