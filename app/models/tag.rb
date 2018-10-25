@@ -1,4 +1,5 @@
 class Tag < ApplicationRecord
-  belongs_to :article, through: :article_tag_mappings
-  has_many :article_tag_mappings
+  # allow default:nil to association model
+  belongs_to :article, optional: true
+  has_many :article_tag_mappings, dependent: :destroy
 end

@@ -29,6 +29,9 @@
             %li.a-button__menu
               -# = link_to edit_article_path do
                 Edit
+            %li.a-button__menu
+              = link_to tags_path do
+                Post_Tags
 
       = yield
       %footer.o-footer

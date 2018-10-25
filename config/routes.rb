@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get '/author' => 'statics#author'
 
   resources 'articles'
+  resources 'tags', only: %i(index new create destroy edit update)
   resources 'statics', only: %i(author)
 end
