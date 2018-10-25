@@ -13,9 +13,9 @@
         %h1 ブログ
         %nav.m-menu
           %ul.m-menu__list
-            -# = link_to authors_path do
             %li.a-button__menu
-              Author
+              = link_to '/author' do
+                Author
             %li.a-button__menu
               = link_to articles_path do
                 Articles
