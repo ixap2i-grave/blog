@@ -1,14 +1,15 @@
 .t-blog
   .o-side__left
+    %h2 tags#post
     - if flash.now[:danger].present?
       = h(flash.now[:danger])
     = form_for @tag do |t|
       = t.text_field :category
       = t.submit '送信'
-  %main.o-main
+  %main.o-main__column
     %ul
-    - @tags.each do |tag|
-      %li
-        = tag.category
-        = tag.created_at.strftime("%c")
-        = link_to 'X', tag, method: :delete, data: {confirm: 'Are you sure?'}
+      - @tags.each do |tag|
+        %li
+          = tag.category
+          = tag.created_at.strftime("%c")
+          = link_to 'X', tag, method: :delete, data: {confirm: 'Are you sure?'}

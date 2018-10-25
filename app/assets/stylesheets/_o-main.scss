@@ -8,4 +8,14 @@
   width: 100%;
   flex: 5;
   overflow-y: scroll;
+  &__column {
+    background: rgb(243, 243, 167);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;  
+    flex-direction: column;
+  }
 }
