@@ -8,4 +8,20 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   %body
-    = yield
+    .p-top
+      %header.o-header
+        %nav.m-menu
+          %ul.m-menu__list
+            %li.a-button__menu
+              | test
+            %li.a-button__menu
+              | test
+            %li.a-button__menu
+              | test
+      = yield
+      %footer.o-footer
+        | test
+        | test
+        | test
+        | test
+        | test

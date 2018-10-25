@@ -1,0 +1,14 @@
+.o-side {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  background: rgb(118, 154, 187);
+  &__right {
+    background: rgb(250, 204, 119);
+    flex: 1;
+  }
+  &__left {
+    background: rgb(230, 176, 157);
+    flex: 1;
+  }
+}

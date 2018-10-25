@@ -1,0 +1,23 @@
+.a-button {
+  &__menu {
+    margin-bottom: 3px;
+    &:nth-child(1) {
+      top: 20px;
+      left: 51px;
+    }
+    &:nth-child(2) {
+      top: 2.2rem;
+      left: 30px;
+    }
+    &:nth-child(3) {
+      top: 3.2rem;
+      left: 0px;
+    }
+    // &:nth-child(4) {
+    //   top: 10px;
+    // }
+    // &:nth-child(5) {
+    //   top: 20px;
+    // }
+  }
+}
