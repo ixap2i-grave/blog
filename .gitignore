@@ -41,4 +41,4 @@ doc/
 /config/master.key
 .env
 
-db/*
+/db/*
