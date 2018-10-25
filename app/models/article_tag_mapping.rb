@@ -1,0 +1,2 @@
+class ArticleTagMapping < ApplicationRecord
+end
