@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :find_resources, only: %i(show create edit update destroy)
+  before_action :find_resources, only: %i(show edit update destroy)
 
   def index
      @articles = Article.all
@@ -9,10 +9,11 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new article_params
+    @article = Article.new
   end
 
   def create
+    @article = Article.new article_params
     if @article.save
       redirect_to articles_path
     else
@@ -36,6 +37,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:name, :body, :tag_id)
+    params.require(:article).permit(:name, :body, :article_tag_mappings_attributes [:article_id, :tag_id, :_destroy])
   end
 end

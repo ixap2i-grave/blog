@@ -23,12 +23,12 @@
               = link_to '/' do
                 Top
             -# - if user.admin?
-            -#   %li.a-button__menu
-            -#     = link_to '/' do
-            -#       Post
-            -#   %li.a-button__menu
-            -#     = link_to '/' do
-            -#       Edit
+            %li.a-button__menu
+              = link_to new_article_path do
+                Post
+            %li.a-button__menu
+              -# = link_to edit_article_path do
+                Edit
 
       = yield
       %footer.o-footer
