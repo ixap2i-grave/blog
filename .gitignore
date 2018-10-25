@@ -40,3 +40,5 @@ doc/
 /config/credentials.yml.enc
 /config/master.key
 .env
+
+db/schema.rb
