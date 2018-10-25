@@ -1,0 +1,11 @@
+.a-label {
+  width: 10rem;
+  &__clamp {
+    width: 10rem;
+    height: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+}

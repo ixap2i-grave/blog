@@ -14,24 +14,25 @@
         %nav.m-menu
           %ul.m-menu__list
             %li.a-button__menu
+              .line
               = link_to '/author' do
                 Author
             %li.a-button__menu
-              = link_to articles_path do
-                Articles
+              .line
+              = link_to tags_path do
+                Post_Tags
             %li.a-button__menu
-              = link_to '/' do
-                Top
-            -# - if user.admin?
-            %li.a-button__menu
+              .line
               = link_to new_article_path do
                 Post
             %li.a-button__menu
-              -# = link_to edit_article_path do
-                Edit
+              .line
+              = link_to '/' do
+                Top
             %li.a-button__menu
-              = link_to tags_path do
-                Post_Tags
+              .line
+              = link_to articles_path do
+                Articles
 
       = yield
       %footer.o-footer

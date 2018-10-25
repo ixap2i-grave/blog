@@ -22,8 +22,8 @@
       %section.m-articleBox
         %h2
           = article.name
-        %article
-          = article.body.html_safe
+        %article.a-label__clamp
+          = strip_tags article.body
         %h3 #tag
           
       %section.m-articleBox
