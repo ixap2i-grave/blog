@@ -1,5 +1,9 @@
 .o-main {
   background: rgb(243, 243, 167);
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 30px;
   height: 100%;
   width: 100%;
   flex: 5;

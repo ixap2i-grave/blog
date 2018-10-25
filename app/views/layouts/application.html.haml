@@ -10,14 +10,19 @@
   %body
     .p-top
       %header.o-header
+        %h1 ブログ
         %nav.m-menu
           %ul.m-menu__list
+            -# = link_to authors_path do
             %li.a-button__menu
-              | test
+              Author
             %li.a-button__menu
-              | test
+              = link_to articles_path do
+                Articles
             %li.a-button__menu
-              | test
+              = link_to '/' do
+                Top
+
       = yield
       %footer.o-footer
         | test
