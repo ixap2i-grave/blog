@@ -37,6 +37,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:name, :body, :article_tag_mappings_attributes [:article_id, :tag_id, :_destroy])
+    params.require(:article).permit(:name, :body, article_tag_mappings_attributes: [:article_id, :tag_id, :_destroy])
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_26_033733) do
+ActiveRecord::Schema.define(version: 2018_10_26_033734) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "namespace"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_10_26_033733) do
     t.string "name"
     t.string "tag_id"
     t.text "body"
+    t.string "article_tag_mapping_id"
   end
 
   create_table "ckeditor_assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
