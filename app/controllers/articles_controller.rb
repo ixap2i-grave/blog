@@ -54,7 +54,7 @@ class ArticlesController < ApplicationController
 
   private
   def find_resources
-    @article = Article.find_by params[:id]
+    @article = Article.find params[:id]
   end
 
   def article_params
