@@ -10,30 +10,30 @@
   %body
     .p-top
       %header.o-header
-        %h1 ブログ
-        %nav.m-menu
-          %ul.m-menu__list
-            %li.a-button__menu
-              .line
-              = link_to '/author' do
-                Author
-            %li.a-button__menu
-              .line
-              = link_to tags_path do
-                Post_Tags
-            %li.a-button__menu
-              .line
-              = link_to new_article_path do
-                Post
-            %li.a-button__menu
-              .line
-              = link_to '/' do
-                Top
-            %li.a-button__menu
-              .line
-              = link_to articles_path do
-                Articles
+        %ul.m-menu__boxWrap
+          = link_to '/' do
+            %li.a-box
+              Top
+          = link_to '/author' do
+            %li.a-box
+              Author
+          = link_to articles_path do
+            %li.a-box
+              Articles
+          -# %li.a-box
+        .m-menu__boxWrap.-heroImg
 
+        %ul.m-menu__boxWrap
+          = link_to tags_path do
+            %li.a-box
+              Post_Tags
+
+          = link_to new_article_path do
+            %li.a-box            
+              Post
+          = link_to edit_articles_path do
+            %li.a-box
+              Post_edit
       = yield
       %footer.o-footer
         | test

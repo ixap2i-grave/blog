@@ -10,5 +10,8 @@
   &__left {
     background: rgb(230, 176, 157);
     flex: 1;
+    &.-fixed {
+      position: fixed;
+    }
   }
 }

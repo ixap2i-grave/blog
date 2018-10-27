@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
   before_action :find_resources, only: %i(show edit update destroy)
 
   def index
-     @articles = Article.all
+     @articles = Article.all.aggregate_of_month
+     @tags = Tag.all
   end
 
   def show
@@ -20,6 +21,10 @@ class ArticlesController < ApplicationController
       flash.now[:danger] = " 記事の保存に失敗しました"
       render 'new'
     end
+  end
+
+  def edit_tags
+
   end
 
   def edit

@@ -5,12 +5,15 @@
         | sort!
       %li
         \-> .tag?
-      %li
-        Ruby
+      - @tags.each do |tag|
+        %li
+          = tag.category
       %li
         \-> .date?
-      %li
-        Oct.2018
+      - @articles.each do |article|
+        %li
+          = article.created_at.strftime('%c')
+
       %li
         \-> .keyword?
       %li

@@ -10,4 +10,19 @@
       position: absolute;
     }
   }
+  &__boxWrap {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &:nth-child(2){
+      background: url(shunrai.jpg) no-repeat;
+      background-size: cover;
+      background-clip: border-box;
+      background-position: bottom;
+      &:nth-child(3){
+        text-align: right;
+      }
+    }
+  }
 }

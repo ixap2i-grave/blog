@@ -1,0 +1,14 @@
+-# .t-blog
+-#   .o-side__left.-fixed
+-#     - @articles.each do |article|
+-#       %li
+-#         = article.created_at.strftime('%c')
+-#   .o-main
+-#     - if flash.now[:danger].present?
+-#       = h(flash.now[:danger])
+-#     = form_for @article do |f|
+-#       = f.text_field :name
+-#       = f.cktext_area :body
+      
+-#       = f.select :article_tag_mapping_id, ["1", "2", "3"].map{|t| t}
+-#       = f.submit '送信'

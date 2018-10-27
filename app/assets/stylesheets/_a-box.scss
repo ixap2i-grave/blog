@@ -1,3 +1,11 @@
 .a-box {
-  
+  border: dotted 1px #769abb;
+  border-right: initial;
+  height: 100%;
+  width: 120px;
+  align-items: center;
+  text-align: center;
+  &:last-child {
+    border-right: dotted 2px #769abb;
+  }
 }

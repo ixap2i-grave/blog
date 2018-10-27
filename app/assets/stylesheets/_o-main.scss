@@ -1,7 +1,7 @@
 .o-main {
-  background: rgb(243, 243, 167);
+  // background: rgb(245, 245, 199);
   justify-content: space-evenly;
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
   padding: 20px 30px;
   height: 100%;
@@ -9,7 +9,7 @@
   flex: 5;
   overflow-y: scroll;
   &__column {
-    background: rgb(243, 243, 167);
+    // background: rgb(228, 228, 192);
     display: flex;
     flex-wrap: wrap;
     padding: 20px 30px;

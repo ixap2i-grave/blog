@@ -3,4 +3,12 @@ class Article < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :article_tag_mappings, dependent: :destroy
   accepts_nested_attributes_for :article_tag_mappings, allow_destroy: true
+
+  scope :aggregate_of_month, -> do
+    order('created_at ASC')
+  end
+
+  scope :aggregate_of_tag, -> (tag) do
+    joins('article_tag_mapping').where('category_id = ?', tag.category)
+  end
 end
