@@ -3,6 +3,6 @@ module Mecab
 
   def search_associate_words terms
     paragraph =  MeCab::Tagger.new
-    puts paragraph.parse terms
+    paragraph.parse terms
   end
 end

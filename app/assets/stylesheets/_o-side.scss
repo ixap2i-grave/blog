@@ -1,5 +1,7 @@
+@import 'frame-settings';
+
 .o-side {
-  width: 200px;
+  width: $o-side-left-width;
   height: 100%;
   position: absolute;
   background: rgb(118, 154, 187);
@@ -8,9 +10,10 @@
     flex: 1;
   }
   &__left {
-    // background: rgb(230, 176, 157);
     border-right: dotted 2px #769abb;
-    flex: 1;
+    // flex: 1;
+    width: $o-side-left-width;
+    position: fixed;
     &.-fixed {
       position: fixed;
       width: 100%;

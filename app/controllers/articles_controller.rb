@@ -3,8 +3,6 @@ class ArticlesController < ApplicationController
   before_action :find_resources, only: %i(show edit_articles edit update destroy)
 
   def index
-    binding.pry
-
     @search = Article.search params[:q]
     @articles = @search.result.includes(:article_tag_mappings)
     @tags = Tag.all
