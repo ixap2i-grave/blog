@@ -6,19 +6,23 @@
       %li
         \-> .tag?
       - @tags.each do |tag|
-        %li
-          = tag.category
+        = link_to articles_path q:{article_tag_mapping_id_eq: tag.id} do
+          %li
+            = tag.category
       %li
         \-> .date?
-      - @articles.each do |article|
-        %li
-          = article.created_at.strftime('%c')
+      - Article.all.each do |article|
+        = link_to articles_path q:{created_at_eq: article.created_at} do
+          %li
+            = article.created_at.strftime('%c')
 
       %li
         \-> .keyword?
       %li
-      %li
         Food
+      = link_to articles_path do
+        %li
+          \-> .reset!
 
   %main.o-main
     - @articles.each do |article|
@@ -27,21 +31,9 @@
           = article.name
         %article.a-label__clamp
           = strip_tags article.body
-        %h3 #tag
-          
-      %section.m-articleBox
-        %h2 title
-        %article context
-        %h3 #tag
-      %section.m-articleBox
-        %h2 title
-        %article context
-        %h3 #tag
-      %section.m-articleBox
-        %h2 title
-        %article context
-        %h3 #tag
-
+        %h3
+          -# - binding.pry
+          -# = article.tag.category
   .o-side__right
 
 

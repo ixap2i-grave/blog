@@ -1,9 +1,13 @@
 class ArticlesController < ApplicationController
-  before_action :find_resources, only: %i(show edit update destroy)
+  include Mecab
+  before_action :find_resources, only: %i(show edit_articles edit update destroy)
 
   def index
-     @articles = Article.all.aggregate_of_month
-     @tags = Tag.all
+    binding.pry
+
+    @search = Article.search params[:q]
+    @articles = @search.result.includes(:article_tag_mappings)
+    @tags = Tag.all
   end
 
   def show
@@ -23,17 +27,31 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def edit_tags
-
+  def edit_articles
+    ##binding.pry
   end
 
   def edit
+    @articles = Article.all.aggregate_of_month
+
   end
 
   def destroy
   end
 
   def update
+    ##binding.pry
+
+    if @article.update article_params
+      ##binding.pry
+
+      redirect_to edit_articles_path
+    else
+      # errros.add :nest.error.name, "messaage"
+      flash.now[:danger] = '更新に失敗しました'
+      render 'edit'
+    end
+
   end
 
   private
@@ -42,6 +60,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:name, :body, article_tag_mappings_attributes: [:article_id, :tag_id, :_destroy])
+    ##binding.pry
+    params.require(:article).permit(:name, :body, :article_tag_mapping_id, article_tag_mappings_attributes: [:article_id, :tag_id, :_destroy])
   end
 end

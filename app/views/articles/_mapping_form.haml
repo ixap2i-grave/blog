@@ -1,0 +1,6 @@
+test
+%li
+  = ff.select :tag_id, Tag.all.map{|t| [t.category, t.id]}, {}
+%li
+  = ff.hidden_field :article_id, @article.id
+

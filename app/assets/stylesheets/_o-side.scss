@@ -8,10 +8,12 @@
     flex: 1;
   }
   &__left {
-    background: rgb(230, 176, 157);
+    // background: rgb(230, 176, 157);
+    border-right: dotted 2px #769abb;
     flex: 1;
     &.-fixed {
       position: fixed;
+      width: 100%;
     }
   }
 }

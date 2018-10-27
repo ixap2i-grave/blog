@@ -5,6 +5,6 @@
     = form_for @article do |f|
       = f.text_field :name
       = f.cktext_area :body
-      
-      = f.select :article_tag_mapping_id, ["1", "2", "3"].map{|t| t}
+      = f.fields_for :article_tag_mappings, id: 'new_article' do |ff|
+        = ff.collection_select :tag_id, Tag.all.map{|t| [t.category, t.id]}, {}
       = f.submit '送信'
