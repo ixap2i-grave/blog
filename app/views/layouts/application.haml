@@ -7,6 +7,7 @@
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
+    = favicon_link_tag 'github.gif'
   %body
     .p-top
       %header.o-header
@@ -20,13 +21,20 @@
           = link_to articles_path do
             %li.a-box
               Articles
+          = link_to articles_path do
+            %li.a-box
+              Bookmark
+          -# %li.a-box
+          -# %li.a-box
+
         .m-menu__boxWrap.-heroImg
           = image_tag 'up.svg', alt: '', size: '100x100', class: ''
         %ul.m-menu__boxWrap
+          %li.a-box
           = link_to tags_path do
             %li.a-box
               Post_Tags
-
+         
           = link_to new_article_path do
             %li.a-box            
               Post
@@ -35,8 +43,4 @@
               Post_edit
       = yield
       %footer.o-footer
-        | test
-        | test
-        | test
-        | test
-        | test
+        © 2018 Akane Yamashita All Rights Reserved.

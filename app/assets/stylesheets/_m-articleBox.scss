@@ -1,7 +1,13 @@
 .m-articleBox {
-  background: paleturquoise;
+  background: #fff;
+  border: solid 1px #eaeaea;
   flex: 1;
   margin: 10px;
   padding: 100px;
   position: relative;
+  &__profile {
+    flex: 1;
+    position: relative;  
+    display: flex;
+  }
 }

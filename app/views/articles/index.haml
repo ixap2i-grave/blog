@@ -1,6 +1,6 @@
 .t-blog
-  .o-side__left
-    %ul
+  .o-side__left.-wall
+    %ul.m-menu__list
       %li
         | sort!
       %li
@@ -8,7 +8,7 @@
       - @tags.each do |tag|
         = link_to articles_path q:{article_tag_mapping_id_eq: tag.id} do
           %li
-            = tag.category
+            \##{tag.category}
       %li
         \-> .date?
       - Article.all.each do |article|
@@ -25,15 +25,16 @@
           \-> .reset!
   .o-clearfix
   %main.o-main
-    - @articles.each do |article|
-      %section.m-articleBox
-        %h2
-          = article.name
-        %article.a-label__clamp
-          = strip_tags article.body
-        %h3
-          -# - binding.pry
-          -# = article.tag.category
+    - if @articles.size > 0
+      - @articles.each do |article|
+        %section.m-articleBox
+          %h2.a-label.-underLine
+            = article.name
+          %article.a-label__clamp
+            = strip_tags article.body
+          %h3
+            = article.created_at.strftime('%c')
+    - else
+      準備中
   .o-side__right
-
 

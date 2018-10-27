@@ -31,7 +31,6 @@ class ArticlesController < ApplicationController
 
   def edit
     @articles = Article.all.aggregate_of_month
-
   end
 
   def destroy
@@ -54,7 +53,11 @@ class ArticlesController < ApplicationController
 
   private
   def find_resources
-    @article = Article.find params[:id]
+    if params[:id].nil?
+      @article = Article.all.first
+    else
+      @article = Article.find params[:id]
+    end
   end
 
   def article_params

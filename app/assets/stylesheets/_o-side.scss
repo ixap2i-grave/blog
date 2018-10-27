@@ -6,14 +6,41 @@
   position: absolute;
   background: rgb(118, 154, 187);
   &__right {
-    background: rgb(250, 204, 119);
+    border-left: dashed 1px #eaeaea;
     flex: 1;
   }
   &__left {
-    border-right: dotted 2px #769abb;
-    // flex: 1;
+    height: 100%;
     width: $o-side-left-width;
     position: fixed;
+    &.-wall {
+      background-position: bottom;
+      background:
+
+      repeating-linear-gradient(
+        -25deg,
+        transparent 0,
+        transparent 25%,
+        #7c9ee7 0,
+        #7c9ee7 50%
+      ),
+      repeating-linear-gradient(
+        -30deg,
+        transparent 0,
+        transparent 20%,
+        #f5f528 0,
+        #f3f352 40%
+      ) no-repeat;
+      background-blend-mode: multiply;
+      background-size: 40px;
+      color: #ffffe5;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 16pt;
+    }
+    &.-line {
+      border-right: dotted 5px #7c9ee7;
+      height: 100%;
+    }
     &.-fixed {
       position: fixed;
       width: 100%;
