@@ -1,14 +1,21 @@
-.t-blog
+.t-static
   .o-side__left
   %main.o-main
     %h1 Statics#author
-    %h2 Akane Yamashita
-    = image_tag 'p.jpg', alt: '', height: '', width: '340px', class: '', style: "object-fit: contain;"
-
-    %span
-      元社会福祉士、なんちゃって画家、糖尿予備軍。
-    
+    .m-articleBox__profile
+      .a-box
+        %h2 Akane Yamashita
+        = image_tag 'p.jpg', alt: '', height: '', width: '340px', class: '', style: "object-fit: contain;"
+      .a-box
+        %span
+          元社会福祉士、なんちゃって画家、糖尿予備軍。
+        %span
+          米津玄師と西島秀俊に緩くはまっている
+        %span
+          リアルにときめくのは枯れ目or三角形筋肉body
+     
     %h3 Github
     = link_to "https://github.com/ixap2i" do
-      = image_tag 'githubg.gif', alt: '', height: '', width: '100px', class: '', style: "object-fit: contain;"
+      .a-button__here
+        = image_tag 'github.gif', alt: '', height: '', width: '50px', style: "object-fit: contain;"
   .o-side__right

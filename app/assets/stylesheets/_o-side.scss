@@ -10,8 +10,6 @@
     flex: 1;
   }
   &__left {
-    border-right: dotted 2px #769abb;
-    // flex: 1;
     width: $o-side-left-width;
     position: fixed;
     &.-fixed {

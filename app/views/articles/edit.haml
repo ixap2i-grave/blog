@@ -1,5 +1,6 @@
 .t-blog
   .o-side__left.-fixed
+
     - @articles.each do |article|
       = link_to edit_article_path article do 
         %li

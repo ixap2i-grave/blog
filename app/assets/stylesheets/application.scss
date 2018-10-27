@@ -27,12 +27,26 @@ ul, li {
 }
 
 a {
-  color: #eaeaea;
+  color: #201b1b;
+  font-size: 12pt;
+  position: relative;
   text-decoration-color: #cac4c4;
-  transition: 0.5s;
+  transition: 2s;
+
   &:hover {
     text-decoration-line: overline;
     text-decoration-color: #cac4c4;
+    transition: 2s;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: blue;
+      mix-blend-mode: difference;
+      transition: 2s;
+
+    }
   }
 }
 

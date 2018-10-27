@@ -4,4 +4,9 @@
   margin: 10px;
   padding: 100px;
   position: relative;
+  &__profile {
+    flex: 1;
+    position: relative;  
+    display: flex;
+  }
 }

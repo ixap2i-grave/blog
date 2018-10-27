@@ -5,7 +5,12 @@
   flex-direction: row;
   .o-header {
     display: flex;
+    background: url(shunrai.jpg) no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-position: bottom;  
     justify-content: center;
+    overflow-x: scroll;
   }
   .t-blog {
     flex: 30%;
@@ -14,5 +19,4 @@
     display: flex;
     flex-direction: row;
   }
-
 }
