@@ -1,0 +1,15 @@
+current directory: /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+/Users/akane/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20181024-78446-1i3zd81.rb extconf.rb
+creating Makefile
+
+current directory: /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20181024-78446-1r4cu6j/bootsnap
