@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  include Mecab
+  # include Mecab
   before_action :find_resources, only: %i(show edit_articles edit update destroy)
 
   def index
