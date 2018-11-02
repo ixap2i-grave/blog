@@ -14,7 +14,7 @@ NULLCMD = :
 srcdir = .
 topdir = /Users/akane/.rbenv/versions/2.5.0/include/ruby-2.5.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/akane/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin17
+arch_hdrdir = /Users/akane/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin18
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/Users/akane/.rbenv/versions/2.5.0
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20181024-78446-1mb9cc2
-sitelibdir = $(DESTDIR)./.gem.20181024-78446-1mb9cc2
+sitearchdir = $(DESTDIR)./.gem.20181031-1506-1ubkly2
+sitelibdir = $(DESTDIR)./.gem.20181031-1506-1ubkly2
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -84,10 +84,10 @@ CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -pipe  -DNOKOGIRI_USE_PACKAGED_LIBRARIES $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DHAVE_ICONV_H -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxslt/1.1.32/include -I/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxml2/2.9.8/include/libxml2 -I/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxml2/2.9.8/include/libxml2 -I/Users/akane/.rbenv/versions/2.5.0/include -I/usr/local/opt/mysql@5.6/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxml2/2.9.8\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"0001-Revert-Do-not-URI-escape-in-server-side-includes.patch 0002-Fix-nullptr-deref-with-XPath-logic-ops.patch 0003-Fix-infinite-loop-in-LZMA-decompression.patch\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxslt/1.1.32\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
+CPPFLAGS = -DHAVE_ICONV_H -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxslt/1.1.32/include -I/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxml2/2.9.8/include/libxml2 -I/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxml2/2.9.8/include/libxml2 -I/Users/akane/.rbenv/versions/2.5.0/include -I/usr/local/opt/mysql@5.7/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxml2/2.9.8\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"0001-Revert-Do-not-URI-escape-in-server-side-includes.patch 0002-Fix-nullptr-deref-with-XPath-logic-ops.patch 0003-Fix-infinite-loop-in-LZMA-decompression.patch\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxslt/1.1.32\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = -L. -L/Users/akane/.rbenv/versions/2.5.0/lib -L/usr/local/opt/mysql@5.6/lib -fstack-protector -L/usr/local/lib
-dldflags = -L/Users/akane/.rbenv/versions/2.5.0/lib -L/usr/local/opt/mysql@5.6/lib -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
+ldflags  = -L. -L/Users/akane/.rbenv/versions/2.5.0/lib -L/usr/local/opt/mysql@5.7/lib -fstack-protector -L/usr/local/lib
+dldflags = -L/Users/akane/.rbenv/versions/2.5.0/lib -L/usr/local/opt/mysql@5.7/lib -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -dynamic -bundle
@@ -102,7 +102,7 @@ RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = x86_64-darwin17
+arch = x86_64-darwin18
 sitearch = $(arch)
 ruby_version = 2.5.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
@@ -122,8 +122,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir) /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxml2/2.9.8/lib /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxslt/1.1.32/lib
-LIBPATH =  -L. -L$(libdir) -L/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxml2/2.9.8/lib -L/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxslt/1.1.32/lib
+libpath = . $(libdir) /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxml2/2.9.8/lib /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxslt/1.1.32/lib /usr/local/Cellar/xz/5.2.4/lib
+LIBPATH =  -L. -L$(libdir) -L/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxml2/2.9.8/lib -L/Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxslt/1.1.32/lib -L/usr/local/Cellar/xz/5.2.4/lib
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -134,7 +134,7 @@ extout =
 extout_prefix = 
 target_prefix = /nokogiri
 LOCAL_LIBS = 
-LIBS =  /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxslt/1.1.32/lib/libexslt.a -lm -liconv -lpthread -lz /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxml2/2.9.8/lib/libxml2.a /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxslt/1.1.32/lib/libxslt.a -lm -liconv -lpthread -lz /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin17.7.0/libxml2/2.9.8/lib/libxml2.a -llzma -lpthread -lgmp -ldl -lobjc  
+LIBS =  /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxslt/1.1.32/lib/libexslt.a -lm -liconv -lpthread -llzma -lz /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxml2/2.9.8/lib/libxml2.a /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxslt/1.1.32/lib/libxslt.a -lm -liconv -lpthread -llzma -lz /Users/akane/dev/blog/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ports/x86_64-apple-darwin18.0.0/libxml2/2.9.8/lib/libxml2.a -llzma -lpthread -lgmp -ldl -lobjc  
 ORIG_SRCS = html_document.c html_element_description.c html_entity_lookup.c html_sax_parser_context.c html_sax_push_parser.c nokogiri.c xml_attr.c xml_attribute_decl.c xml_cdata.c xml_comment.c xml_document.c xml_document_fragment.c xml_dtd.c xml_element_content.c xml_element_decl.c xml_encoding_handler.c xml_entity_decl.c xml_entity_reference.c xml_io.c xml_libxml2_hacks.c xml_namespace.c xml_node.c xml_node_set.c xml_processing_instruction.c xml_reader.c xml_relax_ng.c xml_sax_parser.c xml_sax_parser_context.c xml_sax_push_parser.c xml_schema.c xml_syntax_error.c xml_text.c xml_xpath_context.c xslt_stylesheet.c
 SRCS = $(ORIG_SRCS) 
 OBJS = html_document.o html_element_description.o html_entity_lookup.o html_sax_parser_context.o html_sax_push_parser.o nokogiri.o xml_attr.o xml_attribute_decl.o xml_cdata.o xml_comment.o xml_document.o xml_document_fragment.o xml_dtd.o xml_element_content.o xml_element_decl.o xml_encoding_handler.o xml_entity_decl.o xml_entity_reference.o xml_io.o xml_libxml2_hacks.o xml_namespace.o xml_node.o xml_node_set.o xml_processing_instruction.o xml_reader.o xml_relax_ng.o xml_sax_parser.o xml_sax_parser_context.o xml_sax_push_parser.o xml_schema.o xml_syntax_error.o xml_text.o xml_xpath_context.o xslt_stylesheet.o

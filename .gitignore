@@ -8,7 +8,7 @@
 /.bundle
 
 # Ignore bundler gems.
-# vendor/bundle
+vendor/bundle
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -39,7 +39,8 @@ doc/
 .secret
 /config/credentials.yml.enc
 /config/master.key
-# .env
+/.env
 
 /db/*
-Gemfile.lock
+/Gemfile.lock
+/.ruby-version
